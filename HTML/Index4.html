@@ -7,21 +7,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESTILOS CSS:: Desafío Latam</title>
     <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
         /*3 formas de dar estilo*/
         /* por elemento (por etiqueta)*/
+        /*00 00 00 de dos en dos colores -> 0,1,2,3,4,5,,6,7,8,9,A,B,C,D,E,F*/
+        /*0 A255 PARA CADA COLOR*/
+        /*por elemento (por etiqueta) todos se ven afectados*/
         
         p {
-            color: green;
+            color: blue;
+            /*asignar color a letras*/
+            background-color: aqua;
+            /*asignar color al fondo*/
+            font-size: 12px;
+        }
+        /*por la clase, uno o varios elementos*/
+        
+        .pcolores {
+            color: rgb(241, 26, 188);
+            font-size: 16px;
+            background-color: lightcoral;
+        }
+        /*por ID, estilo único al elemento*/
+        
+        #parra3 {
+            color: rgb(223, 219, 15);
+            font-size: 20px;
+        }
+        
+        #divisor {
+            background-color: lightblue;
+            font-size: 50px;
+        }
+        
+        #titulo0 {
+            color: rgb(27, 236, 62);
+            font-size: 20px;
+            background-color: #410632;
+        }
+        
+        #divisor1 {
+            width: 600px;
+            height: 200px;
         }
     </style>
 </head>
 
 <body>
-    <div>
+    <h1 class="pcolores" id="titulo0">Título 0</h1>
+    <div id="divisor">
+        <h1>Título</h1>
         <p>Párrafo 1</p>
-        <p>Párrafo 2</p>
-        <p>Párrafo 3</p>
-        <p>Párrafo 4</p>
+        <p class="pcolores">Párrafo 2</p>
+        <p class="pcolores" id="parra3">Párrafo 3</p>
+        <p class="pcolores">Párrafo 4</p>
+    </div>
+    <div id="divisor1" class="pcolores">
+
     </div>
 </body>
 
