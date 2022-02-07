@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Cajas :: Desafío Latam</title>
+    <style>
+        #contenedor {
+            background-color: orange;
+            width: 400px;
+            height: 400px;
+            padding: 10px 15px 20px 25px;
+            margin: 10px auto;
+        }
+        
+        #hijo1 {
+            background-color: skyblue;
+            width: 40px;
+            height: 40px;
+            margin: 10px 15px 20px 25px;
+        }
+        /*por defecto el hijo se crea y ve en la esquina superior izquierda del contener padre, (movimientos en el plano [x,y] con un padding el elemento se "mueve" en el plano de forma diagonal (efecto óptico, es un escudo que se crea alrededor del tamaño del contenedor padre, por tanto es un movimiento visual, pero en la práctica es un escudo por lo tanto ese elemento suma tamaño y para seguir considerando el mismo tamaño del contenedor padre es necesario reducir el px si ya se le agregó padding (en la misma proporción +-)))*/
+        /*el padding con 4 valores va en orden (arriba, derecha, abajo, izquierda)*/
+        /*el margen es la distancia que se quiere tener de el elemento(hijo) con respecto a todos los otros elementos y se visualiza en el hijo (efecto óptico), los px en el margen también significan que el hijo aumenta de tamaño*/
+        /*el margin con 4 valores va en orden (arriba, derecha, abajo, izquierda) se puede agregar 1 valor px y luego la palabra auto y se distribuye el tamaño margen para todos de igual para centrar al contenedor padre*/
+        /*border también suma y se puede ir diferenciando con línea cercado alrededor*/
+    </style>
+</head>
+
+<body>
+    <div id="contenedor">
+        <div id="hijo1"></div>
+
+    </div>
+
+</body>
+
+</html>
