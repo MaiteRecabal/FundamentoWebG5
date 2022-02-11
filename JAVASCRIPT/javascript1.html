@@ -41,13 +41,15 @@
                 var promedio = ((numero1 + numero2) / 2);
                 console.log("El promedio es: " + promedio);
         */
-        var pulgada = prompt("Ingrese valor a convertir");
-        var resultado = parseInt(pulgada) * 0.254;
+        /*
+                var pulgada = prompt("Ingrese valor a convertir");
+                var resultado = parseInt(pulgada) * 0.254;
 
-        document.write("El resultado es : <u> " + parseInt(pulgada) * 0.254 + "</u>");
-        console.log("El resultado es : " + parseInt(pulgada) * 0.254);
-        //alert("El resultado es : " + parseInt(pulgada) * 0.254);
-        alert(`El resultado es ${resultado}`);
+                document.write("El resultado es : <u> " + parseInt(pulgada) * 0.254 + "</u>");
+                console.log("El resultado es : " + parseInt(pulgada) * 0.254);
+                //alert("El resultado es : " + parseInt(pulgada) * 0.254);
+                alert(`El resultado es ${resultado}`);
+        */
 
         /*       switch (resultado) {
                     case resultado > 10:
@@ -65,21 +67,221 @@
 
                 }
                 */
-        switch (resultado) {
-            case 3.54:
-                console.log("mayor a 10");
+        /*var dia = prompt("Ingrese un número del 1 al 7");
+        dia = parseInt(dia);
+        switch (dia) {
+            case 1:
+                console.log("Dia Lunes");
+                document.write("Dia Lunes");
                 break;
-            case 0.762:
-                console.log("menor a 10");
+            case 2:
+                console.log("Dia Martes");
+                document.write("Dia Martes");
                 break;
-            case 0.508:
-                console.log("igual a 10");
+            case 3:
+                console.log("Dia Miércoles");
+                document.write("Dia Miércoles");
+                break;
+            case 4:
+                console.log("Dia Jueves");
+                document.write("Dia Jueves");
+                break;
+            case 5:
+                console.log("Dia Viernes");
+                document.write("Dia Viernes");
+                break;
+            case 6:
+                console.log("Dia Sábado");
+                document.write("Dia Sábado");
+                break;
+            case 7:
+                console.log("Dia Domingo");
+                document.write("Dia Domingo");
                 break;
             default:
-                console.log("ninguna de las anteriores");
+                console.log("Dia no encontrado");
+                document.write("Dia no encontrado");
                 break;
+                }
+                */
 
+
+        /*
+                var mes = prompt("Ingrese un número del 1 al 12");
+                mes = parseInt(mes);
+                switch (mes) {
+                    case 1:
+                        console.log("Enero");
+                        document.write("Enero");
+                        break;
+                    case 2:
+                        console.log("Febrero");
+                        document.write("Febrero");
+                        break;
+                    case 3:
+                        console.log("Marzo");
+                        document.write("Marzo");
+                        break;
+                    case 4:
+                        console.log("Abril");
+                        document.write("Abril");
+                        break;
+                    case 5:
+                        console.log("Mayo");
+                        document.write("Mayo");
+                        break;
+                    case 6:
+                        console.log("Junio");
+                        document.write("Junio");
+                        break;
+                    case 7:
+                        console.log("Julio");
+                        document.write("Julio");
+                        break;
+                    case 8:
+                        console.log("Agosto");
+                        document.write("Agosto");
+                        break;
+                    case 9:
+                        console.log("Septiembre");
+                        document.write("Septiembre");
+                        break;
+                    case 10:
+                        console.log("Octubre");
+                        document.write("Octubre");
+                        break;
+                    case 11:
+                        console.log("Noviembre");
+                        document.write("Noviembre");
+                        break;
+                    case 12:
+                        console.log("Diciembre");
+                        document.write("Diciembre");
+                        break;
+                    default:
+                        console.log("Mes no encontrado");
+                        document.write("Mes no encontrado");
+                        break;
+                }*/
+
+        /*
+            if (edad >= 18) {
+                if (edad <= 40) {
+                    if (region == 12 || region == 15) {
+                        // Persona apta para recibir beneficio
+                    }
+                }
+            }
+            if ((edad >= 18) && (edad <= 40) && (region == 12 || region == 15)) {
+                // Persona apta para recibir beneficio
+            }
+
+            var edad = parseInt(prompt("Ingresa tu edad"));
+            var respuesta = prompt("¿Quieres estudiar en Desafio Latam?");
+            respuesta = respuesta.toUpperCase();
+            //if ((respuesta == "si") || (respuesta == "SI") || (respuesta == "Si") || (respuesta == "sI")) { //si SI Si sI
+            if ((respuesta == "SI") && (edad >= 18)) {
+                console.log("Bienvenido a Desafío Latam");
+            } else if ((respuesta == "SI") && (edad < 18)) {
+                console.log("Que bueno, pero debes estar acompañado por tu representante");
+
+            } else if (respuesta == "NO") {
+                console.log("Que lástima!!_ te esperamos pronto");
+
+            } else {
+                console.log("Datos errados");
+                document.write("Datos errados");
+            }
+            */
+
+        /*
+        if (edad >= 18) {
+            if (edad < 18) {
+                if (region == 12 || region == 15) {
+                    // Persona apta para recibir beneficio
+                }
+            }
         }
+
+        if ((edad >= 18) && (edad < 18) && (region == 12 || region == 15)) {
+            // Persona apta para recibir beneficio
+        }
+
+        var edad = parseInt(prompt("Ingresa tu edad"));
+        var respuesta = prompt("¿Estás estudiando en la Universidad u otra institución?");
+        //respuesta = respuesta.toUpperCase();
+        if ((respuesta == "si") || (respuesta == "SI") || (respuesta == "Si") || (respuesta == "sI")) { //si SI Si sI
+            //if ((respuesta == "SI") && (edad >= 18)) {
+            console.log("Es correcto, deberías estar estudiando");
+        } else if ((respuesta == "NO") && (edad < 18)) {
+            console.log("Que bueno, debes estar en el colegio aín, sigue así");
+
+        } else if (respuesta == "NO") {
+            console.log("Que mal!!_ deberías estar estudiando");
+
+        } else {
+            console.log("Datos errados");
+            document.write("Datos errados");
+        }
+*/
+
+        /*  var numero = parseInt(prompt("ingrese número de tabla de multiplicar"));
+
+          for (var i = 0; i < 11; i++) {
+              console.log(` ${numero} x ${i} = ${numero * i}`);
+          }
+          */
+
+        /* var numero = 0;
+         while (numero <= 20) {
+             if (numero % 2 == 0) {
+                 console.log(numero);
+
+             }
+             numero++;
+         }
+         */
+
+        /*var numero = 0;
+        do {
+            if (numero % 2 == 0) {
+                console.log(numero);
+            }
+            numero++;
+        } while (numero <= 20);
+        */
+
+        /* var sumaImpares = 0; //variable= variable + algo
+        var contador = 0;
+        for (var i = 1; i <= 50; i++) {
+            if (i % 2 != 0) { //impar
+                sumaImpares = sumaImpares + i;
+                contador++;
+
+            }
+        }
+        console.log(`la suma de los ${contador} numeros impares es: ${sumaImpares}`);
+   */
+        /*
+                var edad = parseInt(prompt("Ingresa tu edad"));
+
+                function nombreFuncion(edad) {
+                    document.write("Hola, tu edad es " + edad);
+                    console.log(`Hola, tu edad es: ${edad}`)
+                }
+                nombreFuncion(edad);
+                */
+
+        var num1 = parseInt(prompt("Ingrese un numero"));
+        var num2 = parseInt(prompt("Ingrese segundo numero"));
+        var num3 = parseInt(prompt("Ingrese tercer numero"));
+
+        function sumaNumeros(n1, n2, n3) {
+            var suma = n1 + n2 + n3;
+            return suma; // return n1+n2+n3;
+        }
+        var resultadoSuma = sumaNumeros(num1, num2, num3);
+        document.write(`el resultado de la suma es ${resultadoSuma}`);
     </script>
 </head>
 
