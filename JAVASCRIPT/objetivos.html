@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+    <script>
+        //diccionario
+        //nombre: valor o clave
+        var automovil = {
+            marca: 'Mazda',
+            modelo: '3 sport',
+            patente: 'LJKH63',
+            color: 'azul',
+            kilometraje: 15000,
+            usado: false,
+            encender: function() {
+                alert('automóvil encendido.');
+            }
+        };
+        console.log(automovil);
+        console.log(automovil["patente"], automovil.patente);
+        console.log(automovil.encender);
+        automovil.encender(); //(automovil[encender]())
+        console.clear();
+        let perro = {
+            raza: 'Pastor Alemán',
+            origen: 'Alemania',
+            pelaje: 'Lanudo',
+            peso: '33kg',
+            edad: 12,
+            amigable: true,
+            sonidos: function() {
+                console.log('El perro ladra');
+            }
+        };
+        perro["sonidos"]();
+        //modificando el contenido
+        perro["peso"] = "35kg";
+        perro.edad = 13;
+
+        console.log(perro);
+        perro.sonidos = function() {
+            alert('El perro ladra')
+        };
+        perro.sonidos();
+        //AGREGAR ATRIBUTO
+        perro.tamanio = "Pequeño";
+        console.log(perro);
+        //ELIMINAR ATRIBUTO
+        delete perro.origen;
+        console.log(perro);
+
+        let perro2 = {
+            propietario: {
+                nombre: 'Juan',
+                edad: 34,
+                lugar: {
+                    pais: 'Chile',
+                    ciudad: 'Santiago de Chile'
+                },
+            },
+
+            raza: 'Pastor Alemán',
+            origen: 'Alemania',
+            pelaje: 'Lanudo',
+            peso: '33kg',
+            edad: 12,
+            amigable: true,
+            sonidos: function() {
+                console.log('El perro ladra');
+            }
+        };
+        //acceder a elementos internos
+        console.log(perro2.propietario.lugar.pais);
+
+        //EJERCICIO PROPUESTO
+        console.clear();
+        let alumno = {
+            representante: {
+                nombre: 'Maria',
+                edad: 49,
+                lugar: {
+                    pais: 'Chile',
+                    ciudad: 'Santiago de Chile'
+                },
+            },
+            nombre: 'Manuel',
+            apellido: 'Perez',
+            peso: '45kg',
+            edad: 10,
+            amigable: true,
+            rendimiento: function() {
+                console.log('Muy buen alumno');
+            }
+        };
+        console.log(alumno.nombre, alumno.edad, alumno.peso);
+        console.log(alumno.representante.nombre, alumno.representante.ciudad);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
