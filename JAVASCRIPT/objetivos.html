@@ -6,9 +6,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Objetos</title>
+
     <script>
-        //diccionario
-        //nombre: valor o clave
+        //OBJETOS
+
+        //NOMBRE
+
+        //VALOR
+
+        //CLAVE
+
+
+        //página 32 - Arreglos y objetos - Apoyo Lectura - Arrays y objetos (Parte I)
+        /*
         var automovil = {
             marca: 'Mazda',
             modelo: '3 sport',
@@ -20,40 +30,53 @@
                 alert('automóvil encendido.');
             }
         };
+
         console.log(automovil);
-        console.log(automovil["patente"], automovil.patente);
-        console.log(automovil.encender);
-        automovil.encender(); //(automovil[encender]())
-        console.clear();
+        console.log(automovil["patente"], automovil.patente); //imprime de 2 maneras la patente de automovil
+        console.log(automovil.encender); //muestra el contenido de la funcion encender
+        console.log(automovil.encender()); //ejecuta la funcion encender  //(automovil[encender]()) <- otra forma de ejecutar la funcion
+*/
+
+        //página 34 - Arreglos y objetos - Apoyo Lectura - Arrays y objetos (Parte I)
+        /*
+                //OBJETO PERRO
+                let perro = {
+                    raza: 'Pastor Alemán',
+                    origen: 'Alemania',
+                    pelaje: 'Lanudo',
+                    peso: '33kg',
+                    edad: 12,
+                    amigable: true,
+                    sonidos: function() {
+                        console.log('El perro ladra');
+                    }
+                };
+                perro.sonidos(); //IMPRESIÓN DEL OBJETO, SUS CLAVES Y VALORES
+                //perro["sonidos"](); //otra forma de imprimir
+
+                //MODIFICAR DATOS DEL OBJETO
+                perro["peso"] = "35kg";
+                perro.edad = 13;
+                console.log(perro);
+
+                //MODIFICACIÓN DE FUNCIÓN DEL OBJETO
+                perro.sonidos = function() {
+                    alert('El perro ladra')
+                };
+                perro.sonidos();
+
+                //AGREGAR UNA CLAVE NUEVA
+                perro.tamanio = "Grande";
+                console.log(perro);
+
+                //BORRAR UNA CLAVE
+                delete perro.tamanio;
+                console.log(perro);*/
+
+
+        //OBJETOS DENTRO DE OBJETOS
+        /*
         let perro = {
-            raza: 'Pastor Alemán',
-            origen: 'Alemania',
-            pelaje: 'Lanudo',
-            peso: '33kg',
-            edad: 12,
-            amigable: true,
-            sonidos: function() {
-                console.log('El perro ladra');
-            }
-        };
-        perro["sonidos"]();
-        //modificando el contenido
-        perro["peso"] = "35kg";
-        perro.edad = 13;
-
-        console.log(perro);
-        perro.sonidos = function() {
-            alert('El perro ladra')
-        };
-        perro.sonidos();
-        //AGREGAR ATRIBUTO
-        perro.tamanio = "Pequeño";
-        console.log(perro);
-        //ELIMINAR ATRIBUTO
-        delete perro.origen;
-        console.log(perro);
-
-        let perro2 = {
             propietario: {
                 nombre: 'Juan',
                 edad: 34,
@@ -61,23 +84,33 @@
                     pais: 'Chile',
                     ciudad: 'Santiago de Chile'
                 },
+                direccion: ["casa 1", "casa 2"]
             },
-
             raza: 'Pastor Alemán',
             origen: 'Alemania',
             pelaje: 'Lanudo',
-            peso: '33kg',
-            edad: 12,
+            peso: '30kg',
+            edad: 11,
             amigable: true,
-            sonidos: function() {
-                console.log('El perro ladra');
-            }
         };
-        //acceder a elementos internos
-        console.log(perro2.propietario.lugar.pais);
 
-        //EJERCICIO PROPUESTO
-        console.clear();
+        console.log(perro.propietario.lugar.ciudad); //impresion de ciudad dentro del objeto lugar, dentro del objeto propietario
+        console.log(perro.propietario.direccion[1]); //impresión de casa 2
+*/
+
+
+
+        //página 34 - EJERCICIO PROPUESTO - Arreglos y objetos - Apoyo Lectura - Arrays y objetos (Parte I)
+        /*
+        
+mostrar los elementos: nombre, edad y peso del alumno. 
+
+Además el nombre y la ciudad del representante. 
+
+Luego ejecuta y muestra la función que se encuentra en el elemento denominado
+rendimiento. 
+
+Utiliza el console.log para obtener los resultados en el navegador web. */
         let alumno = {
             representante: {
                 nombre: 'Maria',
@@ -96,12 +129,214 @@
                 console.log('Muy buen alumno');
             }
         };
-        console.log(alumno.nombre, alumno.edad, alumno.peso);
-        console.log(alumno.representante.nombre, alumno.representante.ciudad);
+
+        console.log("Alumno: " + alumno.nombre, ",edad: " + alumno.edad, ",peso: " + alumno.peso);
+        console.log("Representante: " + alumno.representante.nombre, alumno.representante.lugar.ciudad);
+        alumno.rendimiento();
+
+        //página 42 - Arreglos y objetos - Apoyo Lectura - Arrays y objetos (Parte I)
+        //Uso del operador this dentro de un objeto
+        /*
+                var marca = {
+                    nombre: 'Honda'
+                };
+                var modelo = 'Civic';
+                var automovil = {
+                    marca: {
+                        nombre: 'Mazda',
+                        origen: 'Japón'
+                    },
+                    modelo: '3 sport',
+                    patente: 'LJKH63',
+                    color: 'azul',
+                    kilometraje: 15000,
+                    usado: false,
+                    encender: function() {
+                        alert('automóvil ' + marca.nombre + ' ' +
+                            modelo + ' encendido.');
+                        alert('automóvil ' + this.marca.nombre + ' ' +
+                            this.modelo + ' encendido.');
+                    }
+                };
+                automovil.encender();
+        */
+        /*-----------------------------------------------------------------------------------------------------------------*/
+        /*
+        let perro2 = {
+            propietario: {
+                nombre: 'Juan',
+                edad: 34,
+                lugar: {
+                    pais: 'Chile',
+                    ciudad: 'Santiago de Chile'
+                },
+            },
+            raza: 'Pastor Alemán',
+            origen: 'Alemania',
+            pelaje: 'Lanudo',
+            peso: '30kg',
+            edad: 11,
+            amigable: true,
+        };
+
+        perro2.datos = function() {
+            console.log("La raza del perro es", this.raza, ", tiene una edad de", this.edad, " y el propietario es ", this.propietario.nombre);
+        }
+
+        perro2.datos;
+*/
+
+        /*-----------------------------------------------------------------------------------------------------------------*/
+        /*
+        let alumno2 = {
+            representante: {
+                nombre: 'Maria',
+                edad: 49,
+                lugar: {
+                    pais: 'Chile',
+                    ciudad: 'Santiago de Chile'
+                },
+            },
+            nombre: 'Manuel',
+            apellido: 'Perez',
+            peso: '45kg',
+            edad: 10,
+            amigable: true,
+            rendimiento: function() {
+                console.log('Muy buen alumno');
+            }
+        };
+
+        alumno2.mensaje = function() {
+            document.write("El representante del alumno ", this.nombre, " ", this.apellido, ", es ", this.representante.nombre,
+                ", quien reside en ", this.representante.lugar.pais);
+        }
+        alumno2.mensaje();
+        */
+        console.clear();
+        /*ESTA ES UN ARREGLO CON OBJETOS*/
+        function dibujar() {
+            let perros = [{
+                raza: 'Pastor Alemán',
+                origen: 'Alemania',
+                pelaje: 'Lanudo',
+                peso: '33kg',
+                edad: 12
+            }, {
+                raza: 'Poodle',
+                origen: 'Francia',
+                pelaje: 'Lanudo',
+                peso: '20kg',
+                edad: 14
+            }, ];
+
+
+            //FORMA LARGA DE INGRESAR CÓDIGO HTML A TRAVÉS DEL SCRIPT
+            /*
+            body.innerHTML("<table><thead><tr><th>raza</th><th>origen</th><th>pelaje</th><th>peso</th><th>edad</th></tr></thead>" +
+                "<tbody><tr></tr></tbody>" + "</table>");
+                */
+
+            /*
+            //PINTAR LA TABLA DE FORMA DINÁMICA
+            var body = document.getElementsByTagName("body");
+
+            body[0].innerHTML =
+                "<table>" +
+                "<thead><tr></tr></thead>" +
+                "<tbody></tbody>" +
+                "</table>";
+            */
+
+            /*
+
+            var body = document.getElementsByTagName("body");
+                        //OBTENER LOS ATRIBUTOS
+                        for (let atributo in perros[0]) {
+                            console.log(atributo);
+                        } //<th>atributo</th>
+
+                        //COLOCAR LOS ATRIBUTOS EN EL HTML
+                        body[0].innerHTML =
+                            "<table>" +
+                            "<thead><tr id='atributo'></tr></thead>" +
+                            "<tbody></tbody>" +
+                            "</table>";
+            */
+
+            var body = document.getElementsByTagName("body");
+            body[0].innerHTML =
+                "<table>" +
+                "<thead><tr id='atributo'></tr></thead>" +
+                "<tbody id='tablaBody'></tbody>" +
+                "</table>";
+
+            //OBTENER LOS ATRIBUTOS
+            var titulosTabla = ""; //creacion de variable para concatenar con atributo y quede acada atributo con espacio vacío al lado
+            for (let atributo in perros[0]) {
+                console.log(atributo);
+                //<th>atributo</th>
+                titulosTabla = titulosTabla + "<th>" + atributo + "</th>"; //CONCATENAR titulosTabla con atributo
+            }
+            console.log(titulosTabla);
+            var titulos = document.getElementById('atributo'); //busca en el código el id = atributo
+            titulos.innerHTML = titulosTabla; //INGRESAR LA CONCATENACION de la línea 277 en el código HTML (donde encontró el id = atributo) para que cree la tabla
+
+            //obtener los valores de los atributos
+            //<tr><td></td><td></td><td></td><td></td><td></td></tr>
+            var filas = "";
+            for (let i = 0; i < perros.length; i++) {
+                let valores = "";
+                for (let atributo in perros[i]) {
+                    perros[i].atributo
+                        //<td>atributo</td>
+                    valores = valores + "<td>" + perros[i][atributo] + "</td>";
+
+                }
+                //<tr>valores</tr>
+                filas = filas + "<tr>" + valores + "</tr>";
+            }
+            document.getElementById("tablaBody").innerHTML = filas; //INSERTADO EN EL HTML, LÍNEA 271
+        }
     </script>
+
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid blue;
+            border-collapse: collapse;
+        }
+    </style>
+
 </head>
 
 <body>
+    <!--
+        TABLA CREADA PARA USAR EN EL SCRIPT (línea 236)
+        <table>
+        <thead>
+            <tr>
+                <th>raza</th>
+                <th>origen</th>
+                <th>pelaje</th>
+                <th>peso</th>
+                <th>edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </tbody>
+    </table>
+-->
+    <button onclick="dibujar()">dibujar tabla</button>
+    <!--LLAMADA A LA FUNCION DIBUJAR DENTRO DEL SCRIPT, LÍNEA 218-->
 
 </body>
 
