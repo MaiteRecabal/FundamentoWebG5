@@ -229,7 +229,8 @@ Utiliza el console.log para obtener los resultados en el navegador web. */
                 peso: '20kg',
                 edad: 14
             }, ];
-
+            console.dir(perros);
+            console.log(perros);
 
             //FORMA LARGA DE INGRESAR CÓDIGO HTML A TRAVÉS DEL SCRIPT
             /*
@@ -272,6 +273,15 @@ Utiliza el console.log para obtener los resultados en el navegador web. */
                 "</table>";
 
             //OBTENER LOS ATRIBUTOS
+            var llaves = Object.keys(perros);
+            //alert("llaves", llaves);
+            console.log("llaves", llaves);
+            console.log();
+            var valores = Object.values(perros);
+            console.dir("valores", valores);
+            var parValores = Object.entries(perros[0]);
+            console.log("par valores", parValores);
+
             var titulosTabla = ""; //creacion de variable para concatenar con atributo y quede acada atributo con espacio vacío al lado
             for (let atributo in perros[0]) {
                 console.log(atributo);
