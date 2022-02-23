@@ -1,0 +1,114 @@
+body {
+    background: #000000;
+    text-align: center;
+    margin: 0;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+}
+
+body * {
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #000000;
+    color: #ffffff;
+    margin-bottom: 59;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+h3 {
+    font-size: 20px;
+    text-align: left;
+    font-weight: 300;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.iguana-header {
+    width: 100vw;
+}
+
+.desc-section {
+    text-align: center;
+    padding: 0 60px 60px 60px;
+    background: #000000;
+}
+
+.iguana-verde {
+    width: 30%;
+    padding-left: 10%;
+    padding-top: 5%;
+}
+
+.texto-iguana {
+    width: 40%;
+    text-align: left;
+    display: inline-block;
+}
+
+.texto-iguana p {
+    padding-bottom: 19px;
+    padding-left: 10%;
+}
+
+.icons-section {
+    background: #1e1a13;
+    width: 100vw;
+    height: 348px;
+    padding-bottom: 10%;
+}
+
+.icons-section h1 {
+    padding-top: 10%;
+}
+
+.icono {
+    display: inline-block;
+    margin: 60px;
+}
+
+i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.icono h3 {
+    text-align: center;
+}
+
+.imagenes {
+    height: 300px;
+}
+
+.imagen-iguana {
+    margin: 5rem 1rem;
+    width: 18rem;
+    height: 10rem;
+}
+
+footer {
+    background: #1e1a13;
+    width: 100vw;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+footer h3 {
+    text-align: center;
+}
