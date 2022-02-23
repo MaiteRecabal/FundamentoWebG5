@@ -1,0 +1,27 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header h1 {
+    color: #707070;
+}
+
+.text-titulo {
+    color: #212529;
+}
+
+.bg-pink {
+    background: #e83e8c;
+}
+
+h2 {
+    display: inline-block;
+}
+
+.logo-nav {
+    height: 4rem;
+}
+
+.logo-footer {
+    height: 6rem;
+}
