@@ -1,0 +1,52 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h5 {
+    font-weight: 300;
+}
+
+.logo {
+    width: 5rem;
+}
+
+footer {
+    color: #707070;
+}
+
+p {
+    font-weight: 300;
+}
+
+.form-group label {
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.pbajo {
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.palto {
+    display: inline-block;
+    font-size: 0.9rem;
+}
+
+.list-group-item p {
+    margin-bottom: 0;
+}
+
+.list-group-item {
+    padding: 0;
+}
+
+.card-body p {
+    padding-top: 0;
+}
+
+.card-text {
+    padding-top: 0;
+}
