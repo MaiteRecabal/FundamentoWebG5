@@ -2,9 +2,9 @@ const PIEDRA = "piedra";
 const PAPEL = "papel";
 const TIJERA = "tijera";
 
-const TIE = 0;
-const WIN = 1;
-const LOST = 2;
+const EMPATE = 0;
+const GANASTE = 1;
+const PERDISTE = 2;
 
 let isPlaying = false;
 
@@ -22,7 +22,7 @@ papelBtn.addEventListener("click", () => {
     play(PAPEL);
 });
 tijeraBtn.addEventListener("click", () => {
-    play(tijera);
+    play(TIJERA);
 });
 
 function play(userOption) {
@@ -30,13 +30,13 @@ function play(userOption) {
 
     isPlaying = true;
 
-    userImg.src = "img/" + userOption + ".svg";
+    userImg.src = "img/" + userOption + ".png";
 
     resultText.innerHTML = "Chossing!";
 
     const interval = setInterval(function() {
         const machineOption = calcMachineOption();
-        machineImg.src = "img/" + machineOption + ".svg";
+        machineImg.src = "img/" + machineOption + ".png";
     }, 200);
 
     setTimeout(function() {
@@ -46,7 +46,7 @@ function play(userOption) {
         const machineOption = calcMachineOption();
         const result = calcResult(userOption, machineOption);
 
-        machineImg.src = "img/" + machineOption + ".svg";
+        machineImg.src = "img/" + machineOption + ".png";
 
         switch (result) {
             case EMPATE:
