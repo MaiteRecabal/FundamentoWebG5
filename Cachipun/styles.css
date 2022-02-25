@@ -16,7 +16,7 @@ footer a {
 }
 
 button {
-    background-color: #7dc0ff;
+    background-color: #7dffd4;
     border: 4px solid black;
     margin: 5px;
 }
@@ -26,7 +26,7 @@ button {
     height: 100vh;
     max-height: 745px;
     margin: 0 auto;
-    background-color: #be4dff;
+    background-color: #8e73ceb6;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
