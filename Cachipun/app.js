@@ -32,7 +32,7 @@ function play(userOption) {
 
     userImg.src = "img/" + userOption + ".svg";
 
-    resultText.innerHTML = "eligiendo!";
+    resultText.innerHTML = "Jugando!";
 
     const interval = setInterval(function() {
         const machineOption = calcMachineOption();
