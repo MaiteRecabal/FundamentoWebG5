@@ -1,6 +1,6 @@
-const PIEDRA = "piedra";
-const PAPEL = "papel";
-const TIJERA = "tijera";
+const ROCK = "rock";
+const PAPER = "paper";
+const SCISSORS = "scissors";
 
 const EMPATE = 0;
 const GANASTE = 1;
@@ -8,21 +8,21 @@ const PERDISTE = 2;
 
 let isPlaying = false;
 
-const piedraBtn = document.getElementById("piedra");
-const papelBtn = document.getElementById("papel");
-const tijeraBtn = document.getElementById("tijera");
+const rockBtn = document.getElementById("rock");
+const paperBtn = document.getElementById("paper");
+const scissorsBtn = document.getElementById("scissors");
 const resultText = document.getElementById("start-text");
 const userImg = document.getElementById("user-img");
 const machineImg = document.getElementById("machine-img");
 
-piedraBtn.addEventListener("click", () => {
-    play(PIEDRA);
+rockBtn.addEventListener("click", () => {
+    play(ROCK);
 });
-papelBtn.addEventListener("click", () => {
-    play(PAPEL);
+paperBtn.addEventListener("click", () => {
+    play(PAPER);
 });
-tijeraBtn.addEventListener("click", () => {
-    play(TIJERA);
+scissorsBtn.addEventListener("click", () => {
+    play(SCISSORS);
 });
 
 function play(userOption) {
@@ -30,13 +30,13 @@ function play(userOption) {
 
     isPlaying = true;
 
-    userImg.src = "img/" + userOption + ".png";
+    userImg.src = "img/" + userOption + ".svg";
 
-    resultText.innerHTML = "Chossing!";
+    resultText.innerHTML = "eligiendo!";
 
     const interval = setInterval(function() {
         const machineOption = calcMachineOption();
-        machineImg.src = "img/" + machineOption + ".png";
+        machineImg.src = "img/" + machineOption + ".svg";
     }, 200);
 
     setTimeout(function() {
@@ -46,7 +46,7 @@ function play(userOption) {
         const machineOption = calcMachineOption();
         const result = calcResult(userOption, machineOption);
 
-        machineImg.src = "img/" + machineOption + ".png";
+        machineImg.src = "img/" + machineOption + ".svg";
 
         switch (result) {
             case EMPATE:
@@ -67,11 +67,11 @@ function calcMachineOption() {
     const number = Math.floor(Math.random() * 3);
     switch (number) {
         case 0:
-            return PIEDRA;
+            return ROCK;
         case 1:
-            return PAPEL;
+            return PAPER;
         case 2:
-            return TIJERA;
+            return SCISSORS;
     }
 }
 
@@ -79,20 +79,20 @@ function calcResult(userOption, machineOption) {
     if (userOption === machineOption) {
         return EMPATE;
 
-    } else if (userOption === PIEDRA) {
+    } else if (userOption === ROCK) {
 
-        if (machineOption === PAPEL) return PERDISTE;
-        if (machineOption === TIJERA) return GANASTE;
+        if (machineOption === PAPER) return PERDISTE;
+        if (machineOption === SCISSORS) return GANASTE;
 
-    } else if (userOption === PAPEL) {
+    } else if (userOption === PAPER) {
 
-        if (machineOption === TIJERA) return PERDISTE;
-        if (machineOption === PIEDRA) return GANASTE;
+        if (machineOption === SCISSORS) return PERDISTE;
+        if (machineOption === ROCK) return GANASTE;
 
-    } else if (userOption === TIJERA) {
+    } else if (userOption === SCISSORS) {
 
-        if (machineOption === PIEDRA) return PERDISTE;
-        if (machineOption === PAPEL) return GANASTE;
+        if (machineOption === ROCK) return PERDISTE;
+        if (machineOption === PAPER) return GANASTE;
 
     }
 }
